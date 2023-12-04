@@ -1,0 +1,81 @@
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocational Test Result</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css')}}">
+    <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/main.css') }}">
+   <style>
+ .footer .contain .col h1{
+        font-size: 19px;
+        color: lightgray;
+       }
+ .footer .contain .col a{
+        font-size: 15px;
+       }
+.tranier .heading .box-container .box .info h3 {
+    color: black;
+
+}
+   </style> 
+</head>
+
+<body>
+    
+<!-- ======= Header ======= -->
+
+
+  <header id="header" class="header d-flex align-items-center">
+
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center">
+    <!-- Uncomment the line below if you also wish to use an image logo -->
+    <!-- <img src="assets/img/logo.png" alt=""> -->
+    <h1>CareerBuddy<span>.</span></h1>
+    </a>
+    <nav id="navbar" class="navbar">
+      <ul>
+      <li><a href="{{ url_for('main.profile') }}">Home</a></li>
+      <li class="dropdown"><a href="#"><span>Aptitude Test</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+      <ul>
+        <li><a href="{{ url_for('main.apti') }}">Aptitude Test for 10th</a></li>
+        <li class="dropdown"><a href="#"><span>Aptitude Test for 12th</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+        <ul>
+          <li><a href="{{ url_for('main.aptsci') }}">Science</a></li>
+          <li><a href="{{ url_for('main.aptcom') }}">Commerce</a></li>
+          <li><a href="{{ url_for('main.aptart') }}">Arts</a></li>
+        </ul>
+        </li>
+        <li><a href="{{ url_for('main.vocmeth') }}">Aptitude test for Vocational</a></li>
+        <li><a href="{{ url_for('main.dipmeth') }}">Aptitude test for Diploma</a></li>
+      </ul>
+      </li>
+      <li><a href="{{ url_for('main.rdmp') }}" class="navbar-item">Career Roadmap</a></li>
+      <li><a href="{{ url_for('main.rdmp') }}" class="navbar-item">Proffesions</a></li>
+      <li> <a href="{{ url_for('auth.logout') }}" class="navbar-item">Logout</a></li>
+</ul>
+    </nav><!-- .navbar -->
+
+    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+</div>
+
+  </header><!-- End Header -->
+  <div align="center">
+
+  <section class="home" id="home" class="intro-header" style="background-image: url('static/img404.jpg')">
+
+    <h1>Vocational Tourism</h1>
+    <p>Vocational tourism is a type of travel that involves participating in educational or training programs related to a particular profession or skill. This type of tourism is designed to provide individuals with hands-on experience in their chosen field, allowing them to gain practical knowledge and skills that they can apply in their careers.
+
+      Examples of vocational tourism programs include language immersion courses, culinary schools, fashion design workshops, wine-tasting courses, and cultural immersion experiences. These programs may range in duration from a few days to several weeks or months, and may be offered by universities, vocational schools, private companies, or tourism agencies.
+      
+      Vocational tourism can be an excellent way to combine travel and education, allowing individuals to explore new destinations while gaining valuable skills and knowledge that can enhance their careers. It can also be an opportunity to meet like-minded individuals and network with professionals in their field.</p>
+    </section>
+    </div>
+</html>

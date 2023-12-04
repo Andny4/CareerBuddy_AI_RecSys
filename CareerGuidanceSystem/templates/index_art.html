@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+	<title>Aptitude Test Art 2</title>
+	<meta content="" name="description">
+	<meta content="" name="keywords">
+  
+	<!-- Favicons -->
+	<!-- <link href="assets/img/favicon.png" rel="icon">
+	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  
+	<!-- Vendor CSS Files -->
+	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+	<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+	<!-- Template Main CSS File -->
+	<link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/main.css') }}">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;} *  {
+  background-image: url('static/img404.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  opacity: 0.6;
+  padding: 12px;
+  border: 1px solid rgb(21, 19, 19);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  /*background-color: #B8EEFE;*/
+  padding: 20px;
+}
+</style>
+</head>
+<body class="intro-header" style="background-image: url('static/img1.1.jpg')">
+	<header id="header" class="header d-flex align-items-center">
+
+		<div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+		  <a href="index.html" class="logo d-flex align-items-center">
+		  <!-- Uncomment the line below if you also wish to use an image logo -->
+		  <!-- <img src="assets/img/logo.png" alt=""> -->
+		  <h1>CareerBuddy<span>.</span></h1>
+		  </a>
+		  <nav id="navbar" class="navbar">
+			<ul>
+			<li><a href="{{ url_for('main.profile') }}">Home</a></li>
+			<li class="dropdown"><a href="#"><span>Aptitude Test</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+			<ul>
+			  <li><a href="{{ url_for('main.apti') }}">Aptitude Test for 10th</a></li>
+			  <li class="dropdown"><a href="#"><span>Aptitude Test for 12th</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+			  <ul>
+				<li><a href="{{ url_for('main.aptsci') }}">Science</a></li>
+				<li><a href="{{ url_for('main.aptcom') }}">Commerce</a></li>
+				<li><a href="{{ url_for('main.aptart') }}">Arts</a></li>
+			  </ul>
+			  </li>
+			  <li><a href="{{ url_for('main.vocmeth') }}">Aptitude test for Vocational</a></li>
+			  <li><a href="{{ url_for('main.dipmeth') }}">Aptitude test for Diploma</a></li>
+			</ul>
+			</li>
+			<li><a href="{{ url_for('main.rdmp') }}" class="navbar-item">Career Roadmap</a></li>
+			<li><a href="{{ url_for('main.rdmp') }}" class="navbar-item">Proffesions</a></li>
+			<li> <a href="{{ url_for('auth.logout') }}" class="navbar-item">Logout</a></li>
+	  </ul>
+		  </nav><!-- .navbar -->
+	  
+		  <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+		  <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+	  </div>
+	  
+		</header><!-- End Header -->
+	  
+
+	  <section id="blog" class="blog">
+		<div class="container" >
+  
+		  <div class="row g-5">
+  
+			<div class="col-lg-12">
+  
+			  
+  
+  
+			  <div class="comments">
+  
+	  
+				<div class="reply-form">
+  
+				  <h4>Aptitude Test Art 2</h4>
+      
+
+
+
+      
+<!-- <div style="margin: 150px;"> -->
+	<!--<header class="intro-header" style="background-image: url('static/img1.1.jpg')"></header>-->
+	<!--<img src="{{url_for('static', filename='img1.1.jpg')}}"/>-->
+  <form action="/result_art" method="POST">
+
+	
+	<label for="sq1">Do you have a strong passion for visual arts, drawing, and animation?</label>
+	<select id="sq1" name="sq1">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="sq2">Are you willing to put in long hours to perfect your craft and meet project deadlines?</label>
+	<select id="sq2" name="sq2">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="sq3">Do you enjoy collaborating with others to create original stories and characters?
+	</label>
+	<select id="sq3" name="sq3">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="sq4">Are you comfortable with using various software and digital tools for animation and special effects?</label>
+	<select id="sq4" name="sq4">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="sq5">Are you willing to constantly improve your skills and learn new techniques to stay competitive in the industry?</label>
+	<select id="sq5" name="sq5">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="sq6">Do you have an interest in working in various fields such as advertising, film, television, or video game production?
+	</label>
+	<select id="sq6" name="sq6">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="sq7">Are you comfortable with the idea of working on multiple projects simultaneously?</label>
+	<select id="sq7" name="sq7">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+
+	<p>Section Two</p>
+	<label for="cq1">Are you willing to relocate for job opportunities or to work on-location for certain projects?</label>
+	<select id="cq1" name="cq1">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="cq2">Are you interested in managing and coordinating events, such as weddings, conferences, and meetings?
+	</label>
+	<select id="cq2" name="cq2">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="cq3">Do you enjoy working with people and providing excellent customer service?</label>
+	<select id="cq3" name="cq3">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="cq4">Are you willing to work flexible hours, including evenings, weekends, and holidays?
+	</label>
+	<select id="cq4" name="cq4">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="cq5">Do you have good problem-solving skills to handle unexpected situations and issues that arise during events?
+	</label>
+	<select id="cq5" name="cq5">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="cq6">Are you willing to work in a fast-paced and dynamic environment?</label>
+	<select id="cq6" name="cq6">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="cq7">Are you comfortable with the idea of working on multiple projects simultaneously?</label>
+	<select id="cq7" name="cq7">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+
+	<p>Section Three</p>
+	<label for="aq1">Are you passionate about fashion and design?</label>
+	<select id="aq1" name="aq1">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="aq2">Do you have good artistic and creative skills?</label>
+	<select id="aq2" name="aq2">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="aq3">Are you willing to put in long hours to perfect your craft and meet project deadlines?</label>
+	<select id="aq3" name="aq3">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="aq4">Do you have a strong sense of personal style and fashion trends?</label>
+	<select id="aq4" name="aq4">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="aq5">Are you comfortable with using various software and digital tools for design and illustration?</label>
+	<select id="aq5" name="aq5">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="aq6">Are you willing to constantly improve your skills and learn new techniques to stay competitive in the industry?
+	</label>
+	<select id="aq6" name="aq6">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="aq7">Are you willing to work under pressure and make quick decisions to meet deadlines?</label>
+	<select id="aq7" name="aq7">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+
+	
+    <input type="submit"  value="Submit" style="background-color:#c7eaed;border:1px solid #19100b;border-radius:15px;color:#000000;display:inline-block;font-family:'Montserrat',Arial, Geneva, sans-serif;font-size:14px;font-weight:700;line-height:30px;text-align:center;text-decoration:none;width:220px;-webkit-text-size-adjust:none;" />
+</form>
+</div>
+</div>
+
+</div>
+		  </div>
+		</div>
+	  </section>
+	  
+</body>
+</html>

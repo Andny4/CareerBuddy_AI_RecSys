@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>CareerBuddy-Course Details</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+
+  <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css')}}">
+  <!-- =======================================================
+  * Template Name: Impact - v1.1.0
+  * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>CareerBuddy<span>.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="{{ url_for('main.profile') }}">Home</a></li>
+          <li class="dropdown"><a href="#"><span>Aptitude Test</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="{{ url_for('main.apti') }}">Aptitude Test for 10th</a></li>
+              <li class="dropdown"><a href="#"><span>Aptitude Test for 12th</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="{{ url_for('main.aptsci') }}">Science</a></li>
+                  <li><a href="{{ url_for('main.aptcom') }}">Commerce</a></li>
+                  <li><a href="{{ url_for('main.aptart') }}">Arts</a></li>
+                </ul>
+              </li>
+              <li><a href="{{ url_for('main.vocmeth') }}">Aptitude test for Vocational</a></li>
+              <li><a href="{{ url_for('main.dipmeth') }}">Aptitude test for Diploma</a></li>
+            </ul>
+          </li>
+          <li><a href="{{ url_for('main.rdmp') }}" class="navbar-item">Career Roadmap</a></li>
+          <li><a href="{{ url_for('main.rdmp') }}" class="navbar-item">Proffesions</a></li>
+          <li> <a href="{{ url_for('auth.logout') }}" class="navbar-item">Logout</a></li>
+
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+
+
+
+
+
+
+
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="page-header d-flex align-items-center" style="background-image: url('');">
+        <div class="container position-relative">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-6 text-center">
+              <h2>Course Details</h2> <br>
+          
+            <!--<p>Machine learning is an area of artificial intelligence and computer science that comprises supervised and unsupervised learning and includes the development of software and algorithms that can make predictions based on data. Machine learning is utilized across various industries. In the field of data analytics, for example, machine learning is used to make predictions based on trends and insights from data. </p>-->
+            </div>
+            <p>Digital marketing is a form of marketing where businesses promote their products and services through digital platforms like social media, emails, blogs and digital advertising. The process includes building a digital presence and setting up campaigns to target the right audience</p>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Course Details</li>
+          </ol>
+          <p><b>Digital Marketing Courses:</b>
+            These are some of the best digital marketing courses you can take online and get certified in digital marketing.</p>
+        </div>
+      </nav>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="team" class="team">
+      <div class="container" data-aos="fade-up">
+    <div class="row gy-4">
+  
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+        <div class="member">
+          <img src="../static/google_digitalmarketingcourse.webp" class="img-fluid" alt="">
+          <h4>Google Digital Marketing Courses (Free with Certification)</h4>
+          <a class="cta-btn" href="https://learndigital.withgoogle.com/digitalgarage/course/digital-marketing" target="_blank" >Check it out</a>
+        </div>
+        
+      </div><!-- End Team Member(Course1-ML) -->
+
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+        <div class="member">
+          <img src="../static/reliablesoft-academy-logo3200x1440.png" class="img-fluid" alt="">
+          <h4>Reliablesoft Academy (Paid with Certification)</h4>
+          <a class="cta-btn" href="https://www.coursera.org/specializations/machine-learning-introduction" target="_blank">Check it out</a>
+        </div>
+        
+      </div><!-- End Team Member(Course1-ML) -->
+
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+        <div class="member">
+          <img src="../static/semrush-academy.jpeg" class="img-fluid" alt="">
+          <h4>Semrush Academy (Free with Certification)</h4>
+          <a class="cta-btn" href="https://developers.google.com/machine-learning/crash-course/" target="_blank">Check it out</a>
+        </div>
+        
+      </div><!-- End Team Member(Course1-ML) -->
+
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+        <div class="member">
+          <img src="../static/ClickMinded-Digital-Marketing-Course.jpg" class="img-fluid" alt="">
+          <h4>ClickMinded Digital Marketing Course (Paid with Certification)</h4>
+          <a class="cta-btn" href="https://www.upgrad.com/machine-learning-ai-pgd-iiitb/?utm_source=GOOGLE&utm_medium=NBSEARCH&utm_campaign=IND_ACQ_WEB_GOOGLE_NBSEARCH_DV_IIITB_EML_HIT_T1_UNKNOWN&utm_content=AI_ML_Courses&utm_term=online%20ai%20and%20ml%20courses&gclid=Cj0KCQjwwfiaBhC7ARIsAGvcPe78yKR_Sftvy3-mJ7YYOkkeuC9QpQjKxG9fhKyIyc0znp4gbll51CoaAtcxEALw_wcB" target="_blank">Check it out</a>
+        </div>
+        
+      </div><!-- End Team Member(Course1-ML) -->
+
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+        <div class="member">
+          <img src="../static/Academy Thumbnail for Resource Library.webp" class="img-fluid" alt="">
+          <h4>HubSpot Online Marketing Courses (Free with Certification)</h4>
+          <a class="cta-btn" href="https://www.edx.org/course/machine-learning-with-python-a-practical-introduct?index=product_value_experiment_a&queryID=1c2d7f72609ce20ca657eddb49004460&position=4" target="_blank">Check it out</a>
+        </div>
+        
+      </div><!-- End Team Member(Course1-ML) -->
+
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+        <div class="member">
+          <img src="../static/udemy.jpg" class="img-fluid" alt="">
+          <h4>Udemy Digital Marketing Course (Paid with Certification)</h4>
+          <a class="cta-btn" href="https://www.simplilearn.com/pgp-ai-machine-learning-certification-training-course" target="_blank">Check it out</a>
+        </div>
+        
+      </div><!-- End Team Member(Course1-ML) -->
+
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+        <div class="member">
+          <img src="../static/Simplilearn-Business-Model-startuptalky.jpg" class="img-fluid" alt="">
+          <h4>Simplilearn Digital Marketing Specialist (Paid with Certification)</h4>
+          <a class="cta-btn" href="https://course18.fast.ai/ml" target="_blank">Check it out</a>
+        </div>
+        
+      </div><!-- End Team Member(Course1-ML) -->
+
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+        <div class="member">
+          <img src="../static/SEO-Image-purple_2x.jpg" class="img-fluid" alt="">
+          <h4>Udacity Digital Marketing Course (Paid with Certification) </h4>
+          <a class="cta-btn" href="https://intellipaat.com/machine-learning-certification-training-course/" target="_blank">Check it out</a>
+        </div>
+        
+      </div><!-- End Team Member(Course1-ML) -->
+
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+        <div class="member">
+          <img src="../static/Coursera-Logo.png" class="img-fluid" alt="">
+          <h4>Coursera Digital Marketing Courses (Paid with Certification)</h4>
+          <a class="cta-btn" href="https://www.udacity.com/course/intro-to-machine-learning-nanodegree--nd229" target="_blank">Check it out</a>
+        </div>
+        
+      </div><!-- End Team Member(Course1-ML) -->
+
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+        <div class="member">
+          <img src="../static/Google-Digital-Marketing-E-commerce-Certificate-1.jpg" class="img-fluid" alt="">
+          <h4>Google Digital Marketing and eCommerce Courses (Paid with Certification)</h4>
+          <a class="cta-btn" href="https://www.mygreatlearning.com/academy/learn-for-free/courses/machine-learning-algorithms" target="_blank">Check it out</a>
+        </div>
+        
+      </div><!-- End Team Member(Course1-ML) -->
+
+      
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span>CareerBuddy</span>
+          </a>
+          <p></p>
+          <div class="social-links d-flex mt-4">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Career Roadmap</a></li>
+            <li><a href="#">Aptitude tests</a></li>
+            <li><a href="#">Recommend E-learning websites for various courses</a></li>
+            
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>
+            Borivali <br>
+            Mumbai<br>
+            Maharashtra <br><br>
+            <strong>Phone:</strong> +1 5589 55488 55<br>
+            <strong>Email:</strong> careerbuddy@gmail.com<br>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Impact</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/impact-bootstrap-business-website-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

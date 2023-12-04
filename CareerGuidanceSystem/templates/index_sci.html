@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+	<title>Aptitude Test Science 2</title>
+	<meta content="" name="description">
+	<meta content="" name="keywords">
+  
+	<!-- Favicons -->
+	<!-- <link href="assets/img/favicon.png" rel="icon">
+	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  
+	<!-- Vendor CSS Files -->
+	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+	<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+	<!-- Template Main CSS File -->
+	<link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/main.css') }}">
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;} *  {
+  background-image: url('static/img404.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  opacity: 0.6;
+  padding: 12px;
+  border: 1px solid rgb(21, 19, 19);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  /*background-color: #B8EEFE;*/
+  padding: 20px;
+}
+</style>
+</head>
+<body class="intro-header" style="background-image: url('static/img1.1.jpg')">
+	  <!-- ======= Header ======= -->
+	  <header id="header" class="header d-flex align-items-center">
+
+		<div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+		  <a href="index.html" class="logo d-flex align-items-center">
+		  <!-- Uncomment the line below if you also wish to use an image logo -->
+		  <!-- <img src="assets/img/logo.png" alt=""> -->
+		  <h1>CareerBuddy<span>.</span></h1>
+		  </a>
+		  <nav id="navbar" class="navbar">
+			<ul>
+			<li><a href="{{ url_for('main.profile') }}">Home</a></li>
+			<li class="dropdown"><a href="#"><span>Aptitude Test</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+			<ul>
+			  <li><a href="{{ url_for('main.apti') }}">Aptitude Test for 10th</a></li>
+			  <li class="dropdown"><a href="#"><span>Aptitude Test for 12th</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+			  <ul>
+				<li><a href="{{ url_for('main.aptsci') }}">Science</a></li>
+				<li><a href="{{ url_for('main.aptcom') }}">Commerce</a></li>
+				<li><a href="{{ url_for('main.aptart') }}">Arts</a></li>
+			  </ul>
+			  </li>
+			  <li><a href="{{ url_for('main.vocmeth') }}">Aptitude test for Vocational</a></li>
+			  <li><a href="{{ url_for('main.dipmeth') }}">Aptitude test for Diploma</a></li>
+			</ul>
+			</li>
+			<li><a href="{{ url_for('main.rdmp') }}" class="navbar-item">Career Roadmap</a></li>
+			<li><a href="{{ url_for('main.rdmp') }}" class="navbar-item">Proffesions</a></li>
+			<li> <a href="{{ url_for('auth.logout') }}" class="navbar-item">Logout</a></li>
+	  </ul>
+		  </nav><!-- .navbar -->
+	  
+		  <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+		  <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+	  </div>
+	  
+		</header><!-- End Header -->
+
+
+	  <section id="blog" class="blog">
+		<div class="container" >
+  
+		  <div class="row g-5">
+  
+			<div class="col-lg-12">
+  
+			  
+  
+  
+			  <div class="comments">
+  
+	  
+				<div class="reply-form">
+  
+				  <h4>Aptitude Test Science 2</h4>
+      
+
+
+
+      
+<!-- <div style="margin: 150px;"> -->
+	<!--<header class="intro-header" style="background-image: url('static/img1.1.jpg')"></header>-->
+	<!--<img src="{{url_for('static', filename='img1.1.jpg')}}"/>-->
+  <form action="/result_sci" method="POST">
+	<p>State whether the following is applicable to you -</p>
+	<label for="mq1">I always excel in memorizing names of difficult medicines.</label>
+	<select id="mq1" name="mq1">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="mq2">I would like to treat sick people.</label>
+	<select id="mq2" name="mq2">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="mq3">I like to study the human body and how it works.</label>
+	<select id="mq3" name="mq3">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="mq4">Chemical reactions always fascinate me.</label>
+	<select id="mq4" name="mq4">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="mq5">I am not scared of blood. / Blood doesn't make me feel nauseous.</label>
+	<select id="mq5" name="mq5">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+
+	<p>Section Two</p>
+	<label for="eq1">Technical advancements always amuse me.</label>
+	<select id="eq1" name="eq1">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="eq2">I have an interest in or like coding.</label>
+	<select id="eq2" name="eq2">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="eq3">I would like to make contribution in tech innovations.</label>
+	<select id="eq3" name="eq3">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="eq4">Solving mathematical problems was always my thing.</label>
+	<select id="eq4" name="eq4">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="eq5">I would love to work in teams.	</label>
+	<select id="eq5" name="eq5">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+
+	<p>Section Three</p>
+	<label for="arq1">I am always fascinated by building structures.</label>
+	<select id="arq1" name="arq1">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="arq2">I enjoy making structural drawings.</label>
+	<select id="arq2" name="arq2">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="arq3">I enjoy and thrive in creativity.</label>
+	<select id="arq3" name="arq3">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="arq4">I am good with measurements and math.	</label>
+	<select id="arq4" name="arq4">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="arq5">I am frequently praised for my artistic skills.</label>
+	<select id="arq5" name="arq5">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+
+	<p>Section Four</p>
+	<label for="aeq1">I am financially sound.</label>
+	<select id="aeq1" name="aeq1">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="aeq2">The concept of Space, aircrafts, and space shuttles  always fascinates me.</label>
+	<select id="aeq2" name="aeq2">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="aeq3">I am good at physics.</label>
+	<select id="aeq3" name="aeq3">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="aeq4">My body is adaptable to any environment and I don't fall sick often.</label>
+	<select id="aeq4" name="aeq4">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="aeq5">I would love to work on an airplane.</label>
+	<select id="aeq5" name="aeq5">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+
+	<p>Section Five</p>
+	<label for="pq1">I would love to read and interpret the prescription prescribed by a doctor.</label>
+	<select id="pq1" name="pq1">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="pq2">I would love to learn about medicines and how it works.</label>
+	<select id="pq2" name="pq2">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="pq3">I would love to work in a medical store.</label>
+	<select id="pq3" name="pq3">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="pq4">I am flexible to work in irregular shifts.</label>
+	<select id="pq4" name="pq4">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+	<label for="pq5">I pay attention to details.</label>
+	<select id="pq5" name="pq5">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+	<option value="-1">Not Sure</option>
+	</select>
+	<br>
+
+	
+    <input type="submit"  value="Submit" style="background-color:#c7eaed;border:1px solid #19100b;border-radius:15px;color:#000000;display:inline-block;font-family:'Montserrat',Arial, Geneva, sans-serif;font-size:14px;font-weight:700;line-height:30px;text-align:center;text-decoration:none;width:220px;-webkit-text-size-adjust:none;" />
+</form>
+</div>
+</div>
+
+</div>
+		  </div>
+		</div>
+	  </section>
+	  
+</body>
+</html>

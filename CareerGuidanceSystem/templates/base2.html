@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>CareerBuddy</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../asests/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css')}}">
+
+  <!-- =======================================================
+  * Template Name: Impact - v1.1.0
+  * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+ 
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>CareerBuddy<span>.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          {% if current_user.is_authenticated %}
+
+          <li><a href="{{ url_for('main.profile') }}">Welcome, {{name}}!</a></li>
+          <li><a href="{{ url_for('main.profile') }}" class="navbar-item">Home</a></li>
+          <li><a href="#about">About</a></li>
+
+          <li class="dropdown"><a href="#"><span>Aptitude Test</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="{{ url_for('main.apti') }}">Aptitude Test for 10th</a></li>
+              <li class="dropdown"><a href="#"><span>Aptitude Test for 12th</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="{{ url_for('main.aptsci') }}">Science</a></li>
+                  <li><a href="{{ url_for('main.aptcom') }}">Commerce</a></li>
+                  <li><a href="{{ url_for('main.aptart') }}">Arts</a></li>
+                </ul>
+              </li>
+              <li><a href="{{ url_for('main.vocmeth') }}">Aptitude test for Vocational</a></li>
+            </ul>
+          </li>
+          <li><a href="{{ url_for('main.rdmp') }}" class="navbar-item">Career Roadmap</a></li>
+          <li><a href="{{ url_for('main.prof') }}" class="navbar-item">Professions</a></li>
+          <li><a href="#team" class="navbar-item">Browse Courses</a></li>
+          <li> <a href="{{ url_for('auth.logout') }}" class="navbar-item">Logout</a></li>
+
+
+
+          {% endif %}
+
+
+                      
+                        {% if not current_user.is_authenticated %}
+                        <li><a href="{{ url_for('main.index') }}">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="{{ url_for('auth.login') }}">Login</a></li>
+                        <li><a href="{{ url_for('auth.signup') }}">Sign Up</a></li>
+
+                        {% endif %}
+     
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero">
+      <div class="container position-relative">
+        <div class="row gy-5" data-aos="fade-in">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+            <h2>Welcome {{name}}, to <span>CareerBuddy</span></h2>
+            <p>A place were you can find all career options in one platform.</p>
+
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src="{{ url_for('static', filename='hero-img.svg') }}" class="img-fluid" >
+
+          </div>
+        </div>
+      </div>
+  
+      
+  
+      </div>
+    </section>
+    <!-- End Hero Section -->
+    <main id="main">
+
+      <!-- ======= About Us Section ======= -->
+      <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-header">
+            <h2>About Us</h2>
+            <p></p>
+          </div>
+  
+          <div class="row gy-4">
+            <div class="col-lg-6">
+              <h3>Why go for career guidance at Career Buddy? 🤔</h3>
+              <img src="{{ url_for('static', filename='Career_confused.jpg') }}" class="img-fluid rounded-4 mb-4" alt="">
+              <p>We know seeking clarity on streams, college selection, overseas education, and career planning is extremely hard! Career counselling for students from the right place at the right time is the need of hour.</p>
+              <p>That's where we come into the picture! To help you focus on your dream career </p>
+            </div>
+            <div class="col-lg-6">
+              <div class="content ps-0 ps-lg-5">
+                <p class="fst-italic">
+                  Services that we provide:
+                </p>
+                <ul>
+                  <li><i class="bi bi-check-circle-fill"></i> Career Roadmap which provides information about all the career paths available after 10th and 12th</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Aptitude Tests for students of class 10th and 12th.</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Links to various courses from other websites and their comparison.</li>
+                </ul>
+                <p>
+                  
+                </p>
+  
+                <div class="position-relative mt-4">
+                  <img src="{{ url_for('static', filename='Career.jpg') }}" class="img-fluid rounded-4" alt="">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </section><!-- End About Us Section -->
+  
+      
+  
+      
+  
+    
+  
+      <!-- ======= Portfolio Section ======= -->
+      <section id="team" class="team">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-header">
+            <h2>Courses</h2>
+            <p>Here we recommend different E-learning platforms from which you can do the courses you are interested in.</p>
+  
+          </div>
+      <div class="row gy-4">
+    
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+        <div class="member">
+          <img src="{{ url_for('static', filename='ML.jpeg') }}" class="img-fluid" alt="">
+          <h4>Machine Learning</h4>
+          <a class="cta-btn" href="{{ url_for('main.coml') }}">Check it out</a>
+        </div>
+        
+      </div><!-- End Team Member(Course1-ML) -->
+  
+    
+        <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="member">
+            <img src="{{ url_for('static', filename='webdevelopment.jpg') }}" class="img-fluid" alt="">
+            <h4>Web Development</h4>
+            <a class="cta-btn" href="{{ url_for('main.cowebdev') }}">Check it out</a>
+          </div>
+        </div><!-- End Team Member(Course2-Web Development) -->
+  
+        <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="member">
+            <img src="{{ url_for('static', filename='Pythonn.jpeg') }}" class="img-fluid" alt="">
+            <h4>Python for beginners</h4>
+            <a class="cta-btn" href="{{ url_for('main.copyth') }}">Check it out</a>
+          </div>
+        </div><!-- End Team Member(Course3-Python for beginners) -->
+  
+        <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="member">
+            <img src="{{ url_for('static', filename='java.png') }}" class="img-fluid" alt="">
+            <h4>JAVA for beginners</h4>
+            <a class="cta-btn" href="{{ url_for('main.cojava') }}">Check it out</a>
+          </div>
+        </div><!-- End Team Member(Course4-JAVA for beginners) -->
+  
+        <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="member">
+            <img src="{{ url_for('static', filename='photoshop.png') }}" class="img-fluid" alt="">
+            <h4>Photoshop for beginners</h4>
+            <a class="cta-btn" href="portfolio-details.html">Check it out</a>
+          </div>
+        </div><!-- End Team Member(Course5-Photoshop for beginners) -->
+  
+        <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="member">
+            <img src="{{ url_for('static', filename='digitalmar.png') }}" class="img-fluid" alt="">
+            <h4>Digital Marketing</h4>
+            <a class="cta-btn" href="{{ url_for('main.brdigi') }}">Check it out</a>
+          </div>
+        </div><!-- End Team Member(Course6-Digital Marketing) -->
+  
+        <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="member">
+            <img src="{{ url_for('static', filename='criminaljustice.jpg') }}" class="img-fluid" alt="">
+            <h4>The Psychology of Criminal Justice</h4>
+            <a class="cta-btn" href="portfolio-details.html">Check it out</a>
+          </div>
+        </div><!-- End Team Member(Course7-The Psychology of Criminal Justice) -->
+  
+        <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="member">
+            <img src="{{ url_for('static', filename='Archi.png') }}" class="img-fluid" alt="">
+            <h4>A Global History of Architecture</h4>
+            <a class="cta-btn" href="portfolio-details.html">Check it out</a>
+          </div>
+        </div><!-- End Team Member(Course8-A Global History of Architecture) -->
+  
+              
+              
+  
+              
+  
+            
+          </div>
+  
+        </div>
+      </section><!-- End Portfolio Section -->
+  
+      <!-- ======= Our Team Section ======= -->
+      <section id="team" class="team">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-header">
+            <h2>Our Team</h2>
+            <p></p>
+          </div>
+  
+          <div class="row gy-4">
+  
+            <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+              <div class="member">
+                <img src="{{ url_for('static', filename='img7.webp') }}" class="img-fluid" alt="">
+                <h4>Anudnya</h4>
+                <span>Machine Learning</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div><!-- End Team Member -->
+  
+            <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+              <div class="member">
+                <img src="{{ url_for('static', filename='img2.png') }}" class="img-fluid" alt="">
+                <h4>Aditi</h4>
+                <span>Web development</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div><!-- End Team Member -->
+  
+            <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+              <div class="member">
+                <img src="{{ url_for('static', filename='img1.png') }}" class="img-fluid" alt="">
+                <h4>Christina</h4>
+                <span>Web development</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div><!-- End Team Member -->
+  
+            <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+              <div class="member">
+                <img src="{{ url_for('static', filename='img3.png') }}" class="img-fluid" alt="">
+                <h4>Sherly</h4>
+                <span>Web development</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div><!-- End Team Member -->
+  
+          </div>
+  
+        </div>
+      </section><!-- End Our Team Section -->
+    
+    </main><!-- End #main -->
+  
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+  
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span>CareerBuddy</span>
+            </a>
+            <p></p>
+            <div class="social-links d-flex mt-4">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+  
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Services</a></li>
+              
+            </ul>
+          </div>
+  
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="#">Career Roadmap</a></li>
+              <li><a href="#">Aptitude tests</a></li>
+              <li><a href="#">Recommend E-learning websites for various courses</a></li>
+              
+            </ul>
+          </div>
+  
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact Us</h4>
+            <p>
+              Borivali <br>
+              Mumbai<br>
+              Maharashtra <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> careerbuddy@gmail.com<br>
+            </p>
+  
+          </div>
+  
+        </div>
+      </div>
+  
+      <div class="container mt-4">
+        <div class="copyright">
+          
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/impact-bootstrap-business-website-template/ -->
+          
+        </div>
+      </div>
+  
+    </footer><!-- End Footer -->
+    <!-- End Footer -->
+  
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+    <div id="preloader"></div>
+  
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+  
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+  <div class="hero-body">
+    <div class="container has-text-centered">
+        {% block content %}{% endblock %}
+    </div>
+</div>
+
+ 
+
+
+
+</body>
+
+</html>

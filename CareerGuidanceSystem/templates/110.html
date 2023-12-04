@@ -1,0 +1,81 @@
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Test 2 Result</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css')}}">
+    <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/main.css') }}">
+   <style>
+ .footer .contain .col h1{
+        font-size: 19px;
+        color: lightgray;
+       }
+ .footer .contain .col a{
+        font-size: 15px;
+       }
+.tranier .heading .box-container .box .info h3 {
+    color: black;
+
+}
+   </style> 
+</head>
+
+<body>
+    
+<!-- ======= Header ======= -->
+
+
+  <header id="header" class="header d-flex align-items-center">
+
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center">
+    <!-- Uncomment the line below if you also wish to use an image logo -->
+    <!-- <img src="assets/img/logo.png" alt=""> -->
+    <h1>CareerBuddy<span>.</span></h1>
+    </a>
+    <nav id="navbar" class="navbar">
+      <ul>
+      <li><a href="{{ url_for('main.profile') }}">Home</a></li>
+      <li class="dropdown"><a href="#"><span>Aptitude Test</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+      <ul>
+        <li><a href="{{ url_for('main.apti') }}">Aptitude Test for 10th</a></li>
+        <li class="dropdown"><a href="#"><span>Aptitude Test for 12th</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+        <ul>
+          <li><a href="{{ url_for('main.aptsci') }}">Science</a></li>
+          <li><a href="{{ url_for('main.aptcom') }}">Commerce</a></li>
+          <li><a href="{{ url_for('main.aptart') }}">Arts</a></li>
+        </ul>
+        </li>
+        <li><a href="{{ url_for('main.vocmeth') }}">Aptitude test for Vocational</a></li>
+        <li><a href="{{ url_for('main.dipmeth') }}">Aptitude test for Diploma</a></li>
+      </ul>
+      </li>
+      <li><a href="{{ url_for('main.rdmp') }}" class="navbar-item">Career Roadmap</a></li>
+      <li><a href="{{ url_for('main.rdmp') }}" class="navbar-item">Proffesions</a></li>
+      <li> <a href="{{ url_for('auth.logout') }}" class="navbar-item">Logout</a></li>
+</ul>
+    </nav><!-- .navbar -->
+
+    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+</div>
+
+  </header><!-- End Header -->
+  <div align="center">
+
+  <section class="home" id="home" class="intro-header" style="background-image: url('static/img404.jpg')">
+
+    <h1>Medical</h1>
+    <p>The medical career field encompasses a broad range of professions that involve the diagnosis, treatment, and prevention of illnesses and injuries. Medical professionals work in a variety of settings, including hospitals, clinics, private practices, research laboratories, and public health agencies.
+
+      Some examples of careers in the medical field include doctors, nurses, physician assistants, pharmacists, medical technicians, therapists, and researchers. These professionals use their specialized knowledge and skills to care for patients, conduct medical research, develop new treatments and medications, and educate others on health and wellness.
+      
+      Medical careers often require extensive education and training, with many requiring a bachelor's degree or higher. Additionally, medical professionals are often required to obtain licensure or certification to practice in their respective fields. The medical field is constantly evolving, with new technologies and treatments emerging regularly, making it an exciting and challenging career choice for those interested in healthcare.</p>
+    </section>
+    </div>
+</html>
