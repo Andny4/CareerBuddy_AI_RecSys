@@ -1,2 +1,2 @@
 # CareerBuddy
-ML based Website
+Machine Learning based Website for Career Guidance.
